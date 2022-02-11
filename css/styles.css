@@ -1081,9 +1081,9 @@ body {
   padding-bottom: 10px; }
 
 .sur-couche {
-  left: 35px;
+  left: 15px;
   position: absolute;
-  top: 35px;
+  top: 15px;
   z-index: 2; }
 .details {
   font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
@@ -1093,8 +1093,8 @@ body {
   width: 470px; }
   .details p {
     font-family: "open sans";
-    font-size: 0.85em;
-    color: #000;
+    font-size: 0.85rem;
+    color: #204669;
     text-align: justify;
     padding-bottom: 10px; }
   .details .label {
