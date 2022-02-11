@@ -291,7 +291,7 @@ function generateDataTable(){
                 "className": 'details-control',
                 "orderable": false,
                 "data": null,
-                "defaultContent": '<i class="fa-solid fa-caret-down" />"></i>',
+                "defaultContent": '<i class="fa-solid fa-caret-down"></i>',
                 "width": "1%"
             },
             {"width": "20%"},
@@ -353,7 +353,7 @@ function generateDataTable(){
             tr.removeClass('shown');
             tr.css('background-color', '#fff');
             tr.find('td.details-control i').removeClass('fa-minus-circle');
-            tr.find('td.details-control i').addClass('fa-caret-down');
+            tr.find('td.details-control i').addClass('fa-solid fa-caret-down');
         }
         else {
             row.child(format(row.data())).show();
@@ -362,7 +362,7 @@ function generateDataTable(){
             $('#cfmDetails').parent('td').css('border-top', 0);
             $('#cfmDetails').parent('td').css('padding', 0);
             $('#cfmDetails').parent('td').css('background-color', '#f5f5f5');
-            tr.find('td.details-control i').removeClass('fa-caret-down');
+            tr.find('td.details-control i').removeClass('fa-solid fa-caret-down');
             tr.find('td.details-control i').addClass('fa-minus-circle');
     
         }
@@ -712,7 +712,7 @@ function drawPanelChart(name){
             width: 25
         },
         color: {
-            pattern: ['#78B794']
+            pattern: ['#78B794','#546B89']
         },
         axis: {
             x: {
