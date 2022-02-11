@@ -1087,14 +1087,15 @@ body {
   z-index: 2; }
 .details {
   font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
-  background-color: rgba(156, 158, 165, 0.7);
-  color: #000;
+
+  background-color:#ccd4d8;
+  color: #204669;
   padding: 10px;
   width: 470px; }
   .details p {
     font-family: "open sans";
     font-size: 0.85rem;
-    color: #204669;
+    color: #000;
     text-align: justify;
     padding-bottom: 10px; }
   .details .label {
