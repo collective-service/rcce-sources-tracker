@@ -1109,11 +1109,11 @@ body {
   .details #divider {
     width: 30px; }
     .details #divider hr {
-      border-top: 4px solid #204669; }
+      border-top: 4px solid #2f9c67; }
   .details h6 {
     text-transform: uppercase;
     font-size: 17px;
-    color: #d90368;
+    color: #204669;
     padding-bottom: 10px; }
   .details .key-figure {
     padding-bottom: 10px; }
@@ -1224,7 +1224,7 @@ body {
 #searchBox {
   min-width: 250px;
   padding-right: 20px; 
-  font-size: 0.85rem;
+  font-size: 0.78rem;
 }
 
 .dimensionFilter {
