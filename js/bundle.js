@@ -712,7 +712,7 @@ function drawPanelChart(name){
             width: 25
         },
         color: {
-            pattern: ['#D90368','#78B794']
+            pattern: ['#78B794']
         },
         axis: {
             x: {
