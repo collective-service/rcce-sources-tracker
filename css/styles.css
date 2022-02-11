@@ -1296,7 +1296,7 @@ body {
   font-size: 0.75rem;
 }
 .tag-information {
- background-color: #C2DACA; 
+ background-color: #FCCF9E;
 }
 .tag-knowledge {
  background-color: #9EC8AE; 
@@ -1308,11 +1308,11 @@ body {
  background-color: #2f9c67; 
 }
 .tag-social-environment {
- background-color: #546B89; 
+ background-color: #798BA5; 
 }
 
 .tag-structural-factor {
-  background-color: #204669;;
+  background-color: #546B89;;
 }
 
 table.dataTable thead th,
