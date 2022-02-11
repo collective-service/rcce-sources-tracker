@@ -291,7 +291,7 @@ function generateDataTable(){
                 "className": 'details-control',
                 "orderable": false,
                 "data": null,
-                "defaultContent": '<i class="fa fa-plus-circle"></i>',
+                "defaultContent": '<i class="fa-solid fa-caret-down"></i>',
                 "width": "1%"
             },
             {"width": "25%"},
