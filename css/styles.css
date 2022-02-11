@@ -1081,9 +1081,9 @@ body {
   padding-bottom: 10px; }
 
 .sur-couche {
-  left: 0px;
+  left: 5px;
   position: absolute;
-  top: 0px;
+  top: 5px;
   z-index: 2; }
 .details {
   font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
@@ -1111,6 +1111,7 @@ body {
     .details #divider hr {
       border-top: 4px solid #2f9c67; }
   .details h6 {
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 17px;
     color: #204669;
@@ -1344,12 +1345,12 @@ table.tabDetail tbody tr {
   font-size: 0.83rem;
   line-height: 1.5; }
 
-.fa fa-caret-down {
+.fa-caret-down {
   color: #A6B0C3;
   font-size: 1rem;
   line-height: 1.5; }
 
-.fa fa-caret-right {
+.fa-caret-right {
   color: #A6B0C3;
   font-size: 1rem;
   line-height: 1.5; }
