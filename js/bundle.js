@@ -352,8 +352,8 @@ function generateDataTable(){
             row.child.hide();
             tr.removeClass('shown');
             tr.css('background-color', '#fff');
-            tr.find('td.details-control i').removeClass('fa-minus-circle');
-            tr.find('td.details-control i').addClass('fa-solid fa-caret-down');
+            tr.find('td.details-control i').removeClass('fa fa-caret-right');
+            tr.find('td.details-control i').addClass('fa fa-caret-down');
         }
         else {
             row.child(format(row.data())).show();
@@ -363,7 +363,7 @@ function generateDataTable(){
             $('#cfmDetails').parent('td').css('padding', 0);
             $('#cfmDetails').parent('td').css('background-color', '#f5f5f5');
             tr.find('td.details-control i').removeClass('fa-solid fa-caret-down');
-            tr.find('td.details-control i').addClass('fa-minus-circle');
+            tr.find('td.details-control i').addClass('fa-solid fa-caret-right');
     
         }
     });
