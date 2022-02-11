@@ -1347,12 +1347,14 @@ table.tabDetail tbody tr {
 
 .fa-caret-down {
   color: #A6B0C3;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  margin-top-5px;
   line-height: 1.5; }
 
 .fa-caret-right {
   color: #A6B0C3;
-  font-size: 1.5rem;
+  font-size: 1..3rem;
+  margin-top-5px;
   line-height: 1.5; }
 
 .fa-plus-circle,
