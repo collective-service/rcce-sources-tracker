@@ -1323,10 +1323,10 @@ table.dataTable thead td {
   border-bottom: 1px solid #ccc;
   text-transform: uppercase; }
 
-table.dataTable thead tr {
+table.dataTable tbody tr {
     vertical-align: top;
   padding-top:5px;
-  font-size: 0.80rem;
+  font-size: 0.83rem;
 }
 
 #cfmDetails {
@@ -1336,7 +1336,7 @@ table.tabDetail tbody tr {
   vertical-align: top;
   padding-top:5px;
   background-color: #f5f5f5;
-  font-size: 0.8rem;
+  font-size: 0.83rem;
   line-height: 1.5; }
 
 .fa-solid fa-caret-down {
