@@ -1292,12 +1292,28 @@ body {
   margin-right: 5px;
   border: 0;
   border-radius: 5px;
-  background: #2f9c67; }
-
+  background: #2f9c67; 
+  font-size: 0.75rem;
+}
+.tag-information {
+ background-color: #C2DACA; 
+}
+.tag-knowledge {
+ background-color: #9EC8AE; 
+}
+.tag-perception {
+ background-color: #78B794; 
+}
+.tag-practice {
+ background-color: #2f9c67; 
+}
 .tag-social-environment {
-  background-color: #546B89; }
+ background-color: #546B89; 
+}
+
 .tag-structural-factor {
-  background-color: #204669; }
+  background-color: #204669;;
+}
 
 table.dataTable thead th,
 table.dataTable thead td {
