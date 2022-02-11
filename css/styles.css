@@ -1238,9 +1238,9 @@ body {
     color: #fff; }
   .dimensionFilter .btn:focus,
   .dimensionFilter .btn:hover {
-    background: #9ec8ae; }
+    background: #C2C4C6; }
   .dimensionFilter .tag-all {
-    background: #9d9fa2;
+    background: #000000;
     border: solid 1px #FFF; }
   .dimensionFilter .tag-main {
     background: #2f9c67;
@@ -1296,10 +1296,10 @@ body {
   font-size: 0.75rem;
 }
 .tag-information {
- background-color: #FCCF9E;
+ background-color: #EEA243;
 }
 .tag-knowledge {
- background-color: #9EC8AE; 
+ background-color: #FCCF9E; 
 }
 .tag-perception {
  background-color: #78B794; 
