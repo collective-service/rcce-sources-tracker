@@ -1091,6 +1091,7 @@ body {
   background-color:#ccd4d8;
   color: #204669;
   padding: 10px;
+  padding-right: 20px;
   width: 470px; }
   .details p {
     font-family: "open sans";
@@ -1108,7 +1109,7 @@ body {
   .details #divider {
     width: 30px; }
     .details #divider hr {
-      border-top: 4px solid #2f9c67; }
+      border-top: 4px solid #FFF; }
   .details h6 {
     text-transform: uppercase;
     font-size: 17px;
