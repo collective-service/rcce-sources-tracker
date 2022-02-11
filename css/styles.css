@@ -1315,6 +1315,9 @@ body {
   background-color: #546B89;;
 }
 
+table.dataTable {
+  margin-top:25px;
+}
 table.dataTable thead th,
 table.dataTable thead td {
   font-size: 0.80rem;
