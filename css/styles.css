@@ -1131,6 +1131,15 @@ body {
       line-height: 1;
       min-height: 40px;
       color: #204669; }
+    .details .btn-info {
+     margin: 10px 0 10px 0;
+     color: #ffffff !important;
+     border-color: rgba(0, 0, 0, 0);
+     border-radius: 5px;
+     font-size: 14px;
+     font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif !important;
+     background-color: #2f9c67; }
+
 
 #map {
   width: 100%;
