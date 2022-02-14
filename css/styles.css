@@ -1235,7 +1235,7 @@ body {
   .dimensionFilter .btn {
     outline: none;
     display: block;
-    padding: 5px 8px 5px 8px;
+    padding: 2px 5px 2px 5px;
     font-size: 0.78rem;
     line-height: 1.5;
     color: #fff; }
@@ -1290,7 +1290,7 @@ body {
   color: #fff; }
 
 .alert {
-  padding: 5px;
+  padding: 2px 5px 2px 5px;
   color: #fff;
   margin-right: 5px;
   border: 0;
