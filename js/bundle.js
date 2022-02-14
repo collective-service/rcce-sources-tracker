@@ -572,7 +572,7 @@ let dimensionChart,
     collections = {};
 
 function generateDefaultDetailPane(){
-    $('.details > h6').text('global overwiew');
+    $('.details > h6').text('global overview');
     $('#globalStats').html('');
     $('#globalStats')
         .append(
@@ -601,7 +601,7 @@ function generateDetailPaneFromDim(data, dimension){
             countriesDim.includes(d.trim()) ? '' : countriesDim.push(d.trim());
         });
     });
-    $('.details > h6').text(dimension +' dimension overwiew');
+    $('.details > h6').text(dimension +' dimension overview');
     $('#globalStats').html('');
     $('#globalStats')
         .append(
@@ -678,12 +678,12 @@ function generateCountrytDetailPane(country, name){
 } // generateCountrytDetailPane
 
 function generateOverviewclicked(country, name){
-    $('.details > h6').text('global overwiew');
+    $('.details > h6').text('global overview');
     generateCountrytDetailPane(country, name);
 }
 
 function drawPanelChart(name){
-    $('.details > h6').text(name+' overwiew');
+    $('.details > h6').text(name+' overview');
     $('#overview').html('');
     $('#overview')
         .append(
