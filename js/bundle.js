@@ -702,7 +702,7 @@ function drawPanelChart(name){
     
     var chart = c3.generate({
         bindto: '#dimChart',
-        size: { height: 150 },
+        size: { height: 200 },
         data: {
             x : 'x',
             columns: [xAxisArr, yAxisArr],
