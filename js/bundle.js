@@ -744,7 +744,7 @@ function drawPanelChart(name){
     $('#globalStats').addClass('hidden');
     $('#overview').removeClass('hidden');
 }//drawPanelChart
-let geodataUrl = 'data/wld.json';
+let geodataUrl = 'data/worldmap.json';
 let data_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQwVG8xzJogJgeBzk5-mLaA7BOGWhwU_Z6iGrnGQwPT2OAInzFYX-5hNYh2aFyqn0sVh0PpFikSJuEq/pub?gid=1612863274&single=true&output=csv';
 // 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRQDTIju76FYADX9ZKbKBD1JBA7eFLv86Y8ltOTs24eLqrf3FnKJENmtcUkP1HUMCQq7JL9hgwofz0q/pub?gid=1612863274&single=true&output=csv';
 
