@@ -64,6 +64,7 @@ function getColumnUniqueValues(){
 
 // map js
 let countriesArr = [];
+let isMobile = $(window).width()<767 ? true : false;
 let g, mapsvg, projection, width, height, zoom, path;
 let viewportWidth = window.innerWidth;
 let currentZoom = 1;
@@ -79,8 +80,8 @@ let countryIso3Code = 'ISO_A3',
 function initiateMap() {
     width = viewportWidth;
     height = 500;
-    var mapScale = width/10.6;
-    var mapCenter = [25, 25];
+    var mapScale = (isMobile) ? width/3.5 : width/10.6;//width/10.6;
+    var mapCenter = (isMobile) ? [12, 12] : [25, 25];//[25, 25];
 
     projection = d3.geoMercator()
         .center(mapCenter)
