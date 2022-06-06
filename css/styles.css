@@ -190,7 +190,7 @@ body {
 .searchCountry label {
     font-size: 28px;
     margin-bottom: 0;
-    border-color: #fff;
+    color: #204669;
 }
 
 .searchCountry select {
