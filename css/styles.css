@@ -207,9 +207,14 @@ body {
     transition: all .6s ease;
 }
 
+#map .searchCountry select:focus {
+    outline: none;
+}
+
 #map .searchCountry select:not(:hover) {
     width: 0;
     transition: all .6s ease;
+    background: #ccd4d8;
 }
 
 #map .focus-layer {
@@ -342,6 +347,10 @@ body {
     width: 190px;
     font-size: 0.75rem;
     line-height: 1.5;
+}
+
+#regionSelect:focus {
+    outline: none;
 }
 
 .exportData {
