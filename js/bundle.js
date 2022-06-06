@@ -55,14 +55,16 @@ function generateCountryDropdown() {
 
     $("#countrySelect").on("change", function(d) {
         const selected = $("#countrySelect").val();
-        g.filter('.hasStudy').each(function(element) { //mapsvg.select('g').selectAll('.hasStudy')
-            if (element.properties.ISO_A3 == selected) {
-                mapOnClick(element.properties.NAME, selected);
-                $(this).attr('fill', hoverColor);
-                $(this).addClass('clicked');
+        if (selected != "all") {
+            g.filter('.hasStudy').each(function(element) { //mapsvg.select('g').selectAll('.hasStudy')
+                if (element.properties.ISO_A3 == selected) {
+                    mapOnClick(element.properties.NAME, selected);
+                    $(this).attr('fill', hoverColor);
+                    $(this).addClass('clicked');
 
-            }
-        })
+                }
+            })
+        }
     });
 } //generateCountryDropdown
 
@@ -291,6 +293,7 @@ function resetMap() {
     generateDefaultDetailPane();
     mapClicked = false;
     selectedCountryFromMap = "all";
+    $('#countrySelect').val('all');
 }
 
 // table js
