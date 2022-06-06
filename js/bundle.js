@@ -26,15 +26,50 @@ function generateRegionDropdown() {
 
 } //generateRegionDropdown
 
+function generateCountryDropdown() {
+    let countries = [];
+    countriesArr.forEach(iso => {
+        const srce = geomData.features.filter((s) => { return s.properties.ISO_A3 == iso; });
+        if (srce.length > 0) {
+            countries.push({ country_code: iso, country: srce[0].properties.NAME });
+        }
+    });
+
+    countries.sort(function(a, b) {
+        var x = a.country.toLowerCase();
+        var y = b.country.toLowerCase();
+        if (x < y) { return -1; }
+        if (x > y) { return 1; }
+        return 0;
+    });
+
+    //create dropdown 
+    var dropdown = d3.select("#countrySelect")
+        .selectAll("option")
+        .data(countries)
+        .enter().append("option")
+        .text(function(d) { return d.country; })
+        .attr("value", function(d) {
+            return d.country_code;
+        });
+
+    $("#countrySelect").on("change", function(d) {
+        const selected = $("#countrySelect").val();
+        g.filter('.hasStudy').each(function(element) { //mapsvg.select('g').selectAll('.hasStudy')
+            if (element.properties.ISO_A3 == selected) {
+                mapOnClick(element.properties.NAME, selected);
+                $(this).attr('fill', hoverColor);
+                $(this).addClass('clicked');
+
+            }
+        })
+    });
+} //generateCountryDropdown
+
 function generateDimensionFilterSpan() {
     var labels = "<label><strong>Filter by: <strong></label>";
     for (let index = 0; index < dimensionsArr.length; index++) {
         const item = dimensionsArr[index];
-        // if(item == "Structural factor" || item == "Social environment"){
-        //     labels += '<label><button type="button" class="btn btn-secondary filter" id="'+slugify(item)+'" value="'+item+'">'+item+'</button></label>';
-        // } else {
-        //     labels += '<label><button type="button" class="btn btn-secondary filter" id="'+slugify(item)+'" value="'+item+'">'+item+'</button></label>';
-        // }
         labels += '<label><button type="button" class="btn btn-secondary filter" id="' + slugify(item) + '" value="' + item + '">' + item + '</button></label>';
     }
     $('.dimensionFilter').append(labels);
@@ -78,6 +113,7 @@ let mapFillColor = '#204669', //'#C2DACA',//'#2F9C67',
 let countryIso3Code = 'ISO_A3',
     countryGeoName = 'NAME';
 
+
 function initiateMap() {
     width = viewportWidth;
     height = 500;
@@ -119,7 +155,7 @@ function initiateMap() {
         .append("path")
         .attr('d', path)
         .attr('id', function(d) {
-            return d.properties.countryIso3Code;
+            return d.properties.ISO_A3;
         })
         .attr('class', function(d) {
             var className = (countriesArr.includes(d.properties.ISO_A3)) ? 'hasStudy' : 'inactive';
@@ -171,22 +207,28 @@ function initiateMap() {
             maptip.classed('hidden', true);
         })
         .on("click", function(d) {
-            mapClicked = true;
-            selectedCountryFromMap = d.properties.NAME;
-            mapsvg.select('g').selectAll('.hasStudy').attr('fill', mapFillColor);
 
+            mapOnClick(d.properties.NAME, d.properties.ISO_A3);
             $(this).attr('fill', hoverColor);
             $(this).addClass('clicked');
-            var countryData = getDataTableDataFromMap(d.properties.ISO_A3);
-            updateDataTable(countryData);
-            generateOverviewclicked(d.properties.ISO_A3, d.properties.NAME);
-            $('.btn').removeClass('active');
-            $('#all').toggleClass('active');
-            $('#regionSelect').val('all');
 
         })
 
 } //initiateMap
+
+function mapOnClick(country, iso) {
+    mapClicked = true;
+    selectedCountryFromMap = country;
+    g.filter('.hasStudy').attr('fill', mapFillColor);
+    // $(this).attr('fill', hoverColor);
+    // $(this).addClass('clicked');
+    var countryData = getDataTableDataFromMap(iso);
+    updateDataTable(countryData);
+    generateOverviewclicked(iso, country);
+    $('.btn').removeClass('active');
+    $('#all').toggleClass('active');
+    $('#regionSelect').val('all');
+} //mapOnClick
 
 function showMapTooltip(d, maptip, text) {
     var mouse = d3.mouse(mapsvg.node()).map(function(d) { return parseInt(d); });
@@ -250,6 +292,7 @@ function resetMap() {
     mapClicked = false;
     selectedCountryFromMap = "all";
 }
+
 // table js
 
 // get dimensions formatted in tags
@@ -756,7 +799,6 @@ let data_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQwVG8xzJogJgeBz
 let geomData,
     sourcesData;
 
-
 $(document).ready(function() {
     function getData() {
         Promise.all([
@@ -771,6 +813,7 @@ $(document).ready(function() {
             countriesArr = arrs[0],
                 dimensionsArr = arrs[1],
                 regionsArr.push(...arrs[2]);
+            generateCountryDropdown();
             generateRegionDropdown();
             // init map global stats
             initiateMap();

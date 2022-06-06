@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <!-- CSS only -->
     <link rel="icon" href="https://www.rcce-collective.net/wp-content/uploads/2021/04/android-chrome-192x192-1.png" sizes="192x192" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.11/c3.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.11/c3.min.css" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
     <!-- <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/jquery.dataTables.min.css">
     <!-- <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.1.0/css/buttons.dataTables.min.css"> -->
@@ -32,6 +31,7 @@
     <link href='css/styles.css' rel='stylesheet' />
     <title>RCCE Data Sources Tracker</title>
 </head>
+
 <body>
     <div class="loader">
         <div class="sp sp-circle"></div>
@@ -43,13 +43,15 @@
             <div class="sur-couche">
                 <div class="details">
                     <h5>SOCIAL DATA TRACKER</h5>
-                    <div id="divider"><hr></div>
+                    <div id="divider">
+                        <hr>
+                    </div>
                     <p>
-                        This dashboard measures and tracks key social behavioural data on COVID-19 from multiple research projects conducted in the field or at the global level by partners and academic communities.  
-                    <br>
-                            <a href="https://www.rcce-collective.net/data/behavioural-indicators/methodology/" target="_blank">
-                                <input type="button" class="btn btn-info" value="Our Methodology">
-                            </a> 
+                        This dashboard measures and tracks key social behavioural data on COVID-19 from multiple research projects conducted in the field or at the global level by partners and academic communities.
+                        <br>
+                        <a href="https://www.rcce-collective.net/data/behavioural-indicators/methodology/" target="_blank">
+                            <input type="button" class="btn btn-info" value="Our Methodology">
+                        </a>
                     </p>
                     <h6>GLOBAL OVERVIEW</h6>
                     <div id="globalStats"></div>
@@ -61,9 +63,15 @@
                     <button id="zoom_in">+</button>
                     <button id="zoom_out">-</button>
                 </div>
+                <div class="searchCountry">
+                    <select name="countrySelect" id="countrySelect">
+                        <option value="">All countries</option>
+                    </select>
+                    <label for="countrySelect"><i class="fa-solid fa-globe"></i></label>
+                </div>
             </div>
         </section>
-        <section >
+        <section>
             <div class="filters flex-centrer">
                 <span class="dtSearch">
                     <label id="searchBox"><input class="form-control" id="searchInput" type="text" placeholder="Search.."></label>
@@ -83,7 +91,7 @@
                         <select name="regionSelect" id="regionSelect">
                         </select>
                     </span>
-                    <span>
+                <span>
                         <button class="btn btn-tertiary exportData" id="exportTable">
                             <i class="fa fa-download"> </i> download table data
                         </button>
@@ -94,23 +102,30 @@
         <section>
             <table id="datatable" class="row-border" style="width:100%">
                 <thead>
-                  <tr>
-                      <th></th>
-                      <th>Study</th>
-                      <th>Behavioural Dimension</th>
-                      <th>Region</th>   
-                      <th>Date</th>
-                      <th>Organization</th>
-                      <th>Link</th>
-                      <th></th><th></th><th></th>
-                      <th></th><th></th><th></th>
-                      <th></th><th></th><th></th>
-                  </tr>
+                    <tr>
+                        <th></th>
+                        <th>Study</th>
+                        <th>Behavioural Dimension</th>
+                        <th>Region</th>
+                        <th>Date</th>
+                        <th>Organization</th>
+                        <th>Link</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
                 </thead>
             </table>
         </section>
-      
+
     </div>
     <script type='text/javascript' src='js/bundle.js'></script>
 </body>
+
 </html>

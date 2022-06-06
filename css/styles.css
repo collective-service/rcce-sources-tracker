@@ -178,6 +178,40 @@ body {
     outline: 0;
 }
 
+.searchCountry {
+    position: absolute;
+    right: 45px;
+    top: 120px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.searchCountry label {
+    font-size: 28px;
+    margin-bottom: 0;
+    border-color: #fff;
+}
+
+.searchCountry select {
+    background-color: #fff;
+    border-color: #ccd4d8;
+    height: 42px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    width: 0;
+}
+
+#map .searchCountry select:hover {
+    width: 100%;
+    transition: all .6s ease;
+}
+
+#map .searchCountry select:not(:hover) {
+    width: 0;
+    transition: all .6s ease;
+}
+
 #map .focus-layer {
     background-color: #fff;
     color: #000;
