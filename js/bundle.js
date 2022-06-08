@@ -44,14 +44,11 @@ function generateCountryDropdown() {
     });
 
     //create dropdown 
-    var dropdown = d3.select("#countrySelect")
-        .selectAll("option")
-        .data(countries)
-        .enter().append("option")
-        .text(function(d) { return d.country; })
-        .attr("value", function(d) {
-            return d.country_code;
-        });
+    let options = '';
+    for (let index = 0; index < countries.length; index++) {
+        options += '<option value="' + countries[index].country_code + '">' + countries[index].country + '</option>';
+    }
+    $("#countrySelect").append(options);
 
     $("#countrySelect").on("change", function(d) {
         const selected = $("#countrySelect").val();
@@ -63,8 +60,10 @@ function generateCountryDropdown() {
                     $(this).addClass('clicked');
 
                 }
-            })
+            });
+            return;
         }
+        resetMap();
     });
 } //generateCountryDropdown
 
