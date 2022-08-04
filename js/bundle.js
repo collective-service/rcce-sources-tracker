@@ -795,7 +795,7 @@ function drawPanelChart(name) {
     $('#overview').removeClass('hidden');
 } //drawPanelChart
 let geodataUrl = 'data/wld052022.json';
-let data_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQwVG8xzJogJgeBzk5-mLaA7BOGWhwU_Z6iGrnGQwPT2OAInzFYX-5hNYh2aFyqn0sVh0PpFikSJuEq/pub?gid=1612863274&single=true&output=csv';
+let data_url = 'https://raw.githubusercontent.com/collective-service/BeSD-sources-tracker-scraper/main/social_tracker_data.csv';
 // 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRQDTIju76FYADX9ZKbKBD1JBA7eFLv86Y8ltOTs24eLqrf3FnKJENmtcUkP1HUMCQq7JL9hgwofz0q/pub?gid=1612863274&single=true&output=csv';
 
 let geomData,
