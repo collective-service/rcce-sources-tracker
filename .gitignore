@@ -22,3 +22,5 @@ dist/
 package-lock.json
 
 # data
+dataSources.py
+*.csv
